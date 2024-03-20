@@ -1,0 +1,13 @@
+0 read r1 # Falling Time
+1 read r2 # Initial Position
+2 read r3 # Initial Velocity
+3 setn r4 -10 # gravity
+4 mul r5 r1 r1 # falling time * falling time
+5 mul  r6 r5 r4 # falling time * falling time * gravity
+6 setn r7 2
+7 div r8 r6 r7 # Numerator / 2
+8 mul r9 r3 r1 # Initial Velocity * Falling time
+9 add r10 r9 r2 # Initial position + Initial velocity *falling time
+10 add r11 r10 r8 # Final position
+11 write r11
+12 halt
